@@ -1,15 +1,10 @@
 ---
 layout: post
-title: Setting up GitHub Pages Blogspace!
+title: You're up and running!
 ---
 
-Today I used the knowledge aquired in git-github extracurriculum to set up
-this Blog page -- created by forking the template page of Barry Clark (Thanx!!) 
+Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
-Here I am ... 
+![_config.yml]({{ site.baseurl }}/images/config.png)
 
-![_config.yml]({{ site.baseurl }}/images/mypic.png)
-
-Here, I will document my Report for the first project of Udacity Nanodegree - Program.
-Hosting is done by GitHub, using the Jekyll markdown - to blog translator
-
+The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
