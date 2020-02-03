@@ -1,10 +1,10 @@
 ---
 layout: post
-title: You're up and running!
+title: This is the first setup of the Github Pages Project
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+I updated some info and tangle myself in the slings and arrows of jekyll - gihub - process latencies and markdown
 
 ![_config.yml]({{ site.baseurl }}/images/mypic.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+Perhaps it will succeed to give me some relevant changes til the evenings over ... GitHub.
