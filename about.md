@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Thomas B. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I am a physicist -- at the moment doing nanodegree Data Scientist @ Udacity
+
+I like Ukulele, small embedded computers, Programming and Science in general.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[mailto](mailto:sabine_thomas_es@t-online.de)
