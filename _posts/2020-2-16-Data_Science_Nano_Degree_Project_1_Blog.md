@@ -10,7 +10,7 @@ title:  Data Scientist Nano Degree Project 1 Blog
 
 [Github of Project....](https://github.com/ubiquarum66/UdacityReportsDSND)
 
-In fictious year 2016, I imagined to be asked by fictious SW Universal IDE distributor IDEalIDE to evaluate the situation and perspective of 
+In fictious year 2018, I imagined to be asked by fictious SW Universal IDE distributor IDEalIDE to evaluate the situation and perspective of 
 todays SW developers. Is there a high affinity or volatility in usage of certain languages?
 In this case a refactoring of their IDE shall be undertaken to target (which?) new languages.
     
@@ -41,8 +41,8 @@ In this case a refactoring of their IDE shall be undertaken to target (which?) n
 
 ### What is the most frequent used language nowadays?
 
-![SO Survey 2015 data: usage of Languages over all](../images/kindofcountlang.png)
-![SO Survey 2015 data: usage of Languages by Professionals](../images/kindofcountlangpro.png)
+![SO Survey 2017 data: usage of Languages over all](../images/kindofcountlang.png)
+![SO Survey 2017 data: usage of Languages by Professionals](../images/kindofcountlangpro.png)
 
 This Language Overview shows that the standard industry production languages for web application and desktop application (Java Script, C, C++, C#, Python, ...) still 
 lead the group. Objective C might be due to Apple iOS. 
@@ -51,21 +51,21 @@ Votes of Professionals dominate the overall picture here by far, 30000 to 4000 v
 
 ### What is the most frequent desired language nowadays?
 
-![SO Survey 2015 data: wish to use Languages - over all](../images/kindofcountwishlang.png)
-![SO Survey 2015 data: wish to use Languages - Professionals](../images/kindofcountwishlangpro.png)
+![SO Survey 2017 data: wish to use Languages - over all](../images/kindofcountwishlang.png)
+![SO Survey 2017 data: wish to use Languages - Professionals](../images/kindofcountwishlangpro.png)
 
 A very similar outcome to the first one, regarding production languages, but some volatility in the more exotic languages. Thus some deeper view:
   
 #### Direct Comparision of Languages used and Languages nice to use, counts of all, only Professionals (ca 30000), and only Non Pros (ca 4000):
 
-![SO Survey 2015 data: direct compare all setsl](../images/kindofcomparision.png)
-![SO Survey 2015 data: direct compare Pro sets](../images/kindofcomparisionpro.png)
-![SO Survey 2015 data: direct compare NonPro sets](../images/kindofcomparisionlay.png)
+![SO Survey 2017 data: direct compare all setsl](../images/kindofcomparision.png)
+![SO Survey 2017 data: direct compare Pro sets](../images/kindofcomparisionpro.png)
+![SO Survey 2017 data: direct compare NonPro sets](../images/kindofcomparisionlay.png)
 
 and, visually more concise: the differences  -- showing change potential... shown for only for Pro and only NonPro Respondents
 
-![SO Survey 2015 data: changes used to wish to use as diff Pro](../images/kindofchangespro.png)
-![SO Survey 2015 data: changes used to wish to use as diff NonPro](../images/kindofchangeslay.png)
+![SO Survey 2017 data: changes used to wish to use as diff Pro](../images/kindofchangespro.png)
+![SO Survey 2017 data: changes used to wish to use as diff NonPro](../images/kindofchangeslay.png)
 
 
 + There is a loss of java-script, SQL, php and C#,  and
@@ -78,7 +78,7 @@ Om the whole, in this picture there is no big discrepancy between wish to use an
 
 ### Surprising fun fact:
 
-![SO Survey 2015 data: Job Sat as func of lang](../images/kindoflanguages.png)
+![SO Survey 2017 data: Job Sat as func of lang](../images/kindoflanguages.png)
 
 Job Satisfaction -- as a distance to '6' -- seems to be higher the more the languages differ from the mainstream of production code languages (small but beautiful).
 On the other Hand, the number of statistical members of theses exotic languages goes down, thus, deviation might cover for more differences.
@@ -94,7 +94,7 @@ desired programming languages.
 
 Without going into the detail: 
 
-![SO Survey 2015 data: Defined Metric](../images/Coordinates.png)
+![SO Survey 2017 data: Defined Metric](../images/Coordinates.png)
 
 It is a dot product in a 20 dimensional space of programming languages, of  which unit length  vectors 
 are spun by language lists.
