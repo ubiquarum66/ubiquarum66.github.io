@@ -93,10 +93,10 @@ plotly side (frontend) (templates...html),
 
 Titlepage:
 
-![1](../images/tweets_statistics.png
+![1](../images/tweets_statistics.png)
 
 Example Query:
-![1](../images/query_categories.png
+![1](../images/query_categories.png)
 
 ### Conclusion
 
