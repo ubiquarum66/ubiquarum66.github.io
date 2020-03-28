@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Corona Update: Work goes Home Office
+title: Corona - Work goes Home Office
 ---
 
 ![WorkHomeOffice](../images/workhomeoffice.png)
