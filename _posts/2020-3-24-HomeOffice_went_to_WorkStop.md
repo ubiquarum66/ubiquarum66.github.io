@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Corona Update: Home office went to be Work stop
+title: Corona Update - Home office went to be Work stop
 ---
 
 ![WorkHomeOffice](../images/workhomeofficestop.png)
