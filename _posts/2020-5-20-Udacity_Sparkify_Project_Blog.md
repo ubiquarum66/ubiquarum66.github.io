@@ -4,7 +4,7 @@ title: Udacity Sparkify Project Blog
 ---
 
 
-![](../images/sparkify.png)
+![](../images/titlesparkify.png)
 
 # My, oh my, Why are they Leaving?
 
