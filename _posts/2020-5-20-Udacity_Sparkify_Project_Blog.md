@@ -17,14 +17,14 @@ This application represents the final Project of Data Science Nanodegree Course.
 ## Conceptual Context 
 
 The idea is to bundle and classify 
-log information out of the daily use of the sstreaming platform.
+log information out of the daily use of the streaming platform.
 
 This accidentially created information shall help to identify users that are on the brink of churning, of leaving the revenue prone paid service.
 
 
 The resulting classification might help to intercept this decision of churning just in time by offering incentives or cheaper service or or or...
 
-Now the task i to inspect the logs, and find useful features 
+Now the task is to inspect the logs, and find useful features 
 + to detect the churning itself, and to 
 + somehow describe user behaviour indirectly 
 + thus, by ML, detect behaviour leading to churn.
@@ -65,25 +65,7 @@ This is a classical classification problem.
     + Number of User-Id-s (distinct) is 226
     + Suspicious User-ID is "", wth 8346 entries, they will be imputed by deleting.
 
-+---------+------------------------------------------------------------------------------+
-| Column  | Count or value-set                                                           | 
-+=========+==============================================================================+
-| Artist: | 17656                                                                        | 
-+---------+------------------------------------------------------------------------------+
-| Auth:   | ['Logged Out', 'Cancelled', 'Guest', 'Logged In']                            | 
-+---------+------------------------------------------------------------------------------+
-| Gender: | ['F', None, 'M']                                                             | 
-+---------+------------------------------------------------------------------------------+
-| Level:  | ['free', 'paid']                                                             | 
-+---------+------------------------------------------------------------------------------+
-| Page:   | ['Cancel', 'Submit Downgrade', 'Thumbs Down', 'Home', 'Downgrade',           | 
-|         | 'Roll Advert', 'Logout', 'Save Settings', 'Cancellation Confirmation',       | 
-|         | 'About', 'Submit Registration', 'Settings', 'Login', 'Register',             | 
-|         | 'Add to Playlist', 'Add Friend', 'NextSong', 'Thumbs Up', 'Help',            | 
-|         | 'Upgrade', 'Error', 'Submit Upgrade']                                        | 
-+---------+------------------------------------------------------------------------------+
-| Status: | [307, 404, 200]                                                              | 
-+---------+------------------------------------------------------------------------------+
+![](../images/spark_logentrie_sets.png)
 
 
 3. Prepare Data
