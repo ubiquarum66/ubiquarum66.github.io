@@ -152,12 +152,14 @@ users, the revenue is more than neglectible, if measures prevent churning in tim
     + [Github of Project....](https://github.com/ubiquarum66/UdacityProjectSparkify)   
     
     + Data Udacity Notebook: 
+    
 
 ~~~~
 user_log = spark.read.json('mini_sparkify_event_data.json')
 ~~~~
 
     + Data AWS Notebook: 
+    
 ~~~~
 event_data = "s3n://udacity-dsnd/sparkify/sparkify_event_data.json"
 user_log = spark.read.json(event_data)
