@@ -14,7 +14,7 @@ A Tool to Investigate and try to predict users churning a music streaming servic
 
 This applidcation represents the final Project of Data Science Nanodegree Course. 
 
-#### Conceptual Context 
+## Conceptual Context 
 
 The idea is to bundle and classify 
 queries in case of one or multiple disaster, coming on different input channels as short text notes.
@@ -94,71 +94,106 @@ before churning takes place.
     + A rather stright forward Ansatz could be, that churning can already be predicted by a fall of number of consumed songs
       in the second half of the registration time in respect to the first half.
     + Thus the numer of songs in those two halfs have to be 'featured# and directly checked.
+    + This interessting track could for the time being not followed up, but might be later....
+    
     
 4. Data Modeling - 2 ML Algorithm
-    + The mappin of a bunch of numerical features to a will churn/won't chirn decision is a classification problem.
-    + Thus, a RandomForestClassifier will be used to try to predict churning on a test dataset, after being trained on a random train subset of above 70% of dada
+    + The mapping of a bunch of numerical features to a "will churn/won't churn decision" is a classification problem.
+    + Thus, first a RandomForestClassifier will be used to try to predict churning on a test dataset, 
+      after being trained on a random train subset of above 70% of data.
+
+The candidate features for the fit are evaluated as follows:
+
+4.1 Categorical Data: 
+
+The categorical Data that shall have some influence, has been identified to be
+
++ Level (paid or free, if free no downgrade needed), 
++ Gender, empirical, see picture, bars are different.
++ (month and date is unclear but nevertheless used, as the mini dataset just covers two to three month)
+
+![](../images/spark_level_impct.png)
+![](../images/spark_gender_impct.png)
+![](../images/spark_date_impct.png)
+![](../images/spark_month_impct.png)
+
+4.2 Numerical Data
+
++ beside the frequencies of usage, here the time based features play a small role, 
++ not first and last, but difference (endurance).
+
+![](../images/spark_whisker_artist.png)
+![](../images/spark_whisker_frequency.png)
+![](../images/spark_whisker_songs.png)
+![](../images/spark_whisker_sumlength.png)
+![](../images/spark_whisker_first.png)
+![](../images/spark_whisker_last.png)
+![](../images/spark_whisker_last2.png)
+![](../images/spark_whisker_first2.png)
+![](../images/spark_whisker_lasted.png)
+    
+    
     
 5. Evaluate the Results
-    + Evaluation ...
+
+    + ... the RandomForestClasifier opted the prediction f1 metric to be 0.73,
+    + ... the GausBoost Clasifier shows f1 using Gradient Boosting: 1.0. thus this is either a non-fit metric or a non-fit algorithm.
+    + this must be placed to the open questions to be answered in future work.
+    
+
+It is a pity , that no comparision with the AWS model is possible;
+because due to the not available pandas module, or the crisis of the time based features,
+the models there run with a much more reduced feature set, leading to an evaluated f1 for RFC of just 0.66
+
+
+This results are not very high, but compared to a 50/50 random guessing,and he huge amount of 
+users, the revenue is more than neglectible, if measures prevent churning in time.
+
     
 6. Deploy
-    + Running either in the local Udacity spark workspace (Data Exploration and Mini Dataset) or in a notebook on the aws server of Amazon EMR environment.
+
+    + Running either in the 
+      + local Udacity spark workspace (Udacity Notebook) or 
+      + in the AWS (AWS Notebook) should be enough, 
+      + data has to be at the places mentioned in the scripts. 
+    + [Github of Project....](https://github.com/ubiquarum66/UdacityProjectSparkify)   
     
+    + Data Udacity Notebook: 
+
+~~~~
+user_log = spark.read.json('mini_sparkify_event_data.json')
+~~~~
+
+    + Data AWS Notebook: 
+~~~~
+event_data = "s3n://udacity-dsnd/sparkify/sparkify_event_data.json"
+user_log = spark.read.json(event_data)
+~~~~
+
 ## Questions 
 
-The questions arising here a questions of imbalance , quality and relative reliability. So far there is no catalog and no further strategy from my side.
++ The questions arising here a questions of imbalance , quality and relative reliability. 
+So far there is no catalog and no further strategy from my side.
++ The unnatural metric value of the f1 metric for the GBT Classifier is a interesting open question
++ The picture shows a pattern that predicts a high amount of correlation between time based features. This could influence the quality and should also be investigated.
 
-#### Structural Concept: 
+![](../images/spark_inputs.png)
 
-ETL:
 
-+ load_data(messages_filepath, categories_filepath) get the csv files as pandas Dataframes
-+ clean_data(df) merge the two table by a join with common ID, check for duplicates, remove duplicates
-+ spread the one string representation of 36 category tags into 36 binary columns.
-+ save_data(df, database_filepath) put it allm into a sqlite3 database file in sql format 
+## Summary:
 
-ML:
 
-+ load_data(database_filepath)  gets database sql --> Dataframe, creates test and train data
-+ provide an tokenizer that will remove puntuation, split into tokens and lemmatize tokens (using re and nltk)
-+ build_model() creates  pipeline of vectorizer and MultiOutputClassifier and RandomForestClassifier
-+ model is trained.... and evaluation results to stdout....
-+ model is saved !!! Due to slow computer optimizing took to long... use flask with non opt model ...!!!
-+ optimize_model(model, X_train, Y_train) via GridSearch , two RndomForest parameters are spnned to find an optimuum. 
-    + This was set as an extra call, as it took to long at my site.
-+ and evaluation goes to stdout
-+ opt. model is saved !!! Due to slow computer, I never reached this in test, sorry!
+### Difficulties:
 
-Spark:
-
-#### Difficulties
-
-For a user not acustomed to the working with AWS environment, The infra structure handling is quite difficult.
-
-+ Get the spark server running at AWS
-+ Get the results of spark evaluation to the local reporting desktop
-+ But these are -- like everything in life -- just practicing topics.
-
-#### Results:
-
-Data Exploration:
-
-Distribution of songs in the time before the churn events:
-
-![1](../images/sparkify_song_distrib.png)
-
-Distribution of songs over time of day:
-
-![1](../images/sparkify_time_of_day.png)
-
-Example Query:
-
-![1](../images/sparkify_beforeToTotal.png)
-
-### Conclusion
-
++ The deterministic problem I could not solve in time, as I did not 
+  manage to asign the 'incoming song usage rates' to regular bins of 
+  lifetime of the contract before churning.
++ The spark aws environment does not contain any matplotlib or pandas modules -- at least not for me.
++ Thus I had to restrict and compactify the notebook to pure pyspark.
++ Calculation-Time for one type of Classifier took about 20 min.
+    With strongly reduced featureset, RFC reached a f1 metric of 0.66 
+    
 ### Thanks 
 
-...to Stack Overflow and figure eight for making their data available and to Udacity for the oportunity to handle it.
+...to Stack Overflow and the (fictious?) Sparkifiers for making their data available and to Udacity for the oportunity to handle it.
     
