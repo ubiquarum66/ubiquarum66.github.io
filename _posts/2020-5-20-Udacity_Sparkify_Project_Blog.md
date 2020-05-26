@@ -8,19 +8,30 @@ title: Udacity Sparkify Project Blog
 
 # My, oh my, Why are they Leaving?
 
-A Tool to Investigate and try to predict users churning a music streaming service, Sparjify.
+A Tool to Investigate and try to predict users churning a (fictous) music streaming service, Sparkify.
 
 [Github of Project....](https://github.com/ubiquarum66/UdacityProjectSparkify)
 
-This applidcation represents the final Project of Data Science Nanodegree Course. 
+This application represents the final Project of Data Science Nanodegree Course. 
 
 ## Conceptual Context 
 
 The idea is to bundle and classify 
-queries in case of one or multiple disaster, coming on different input channels as short text notes.
+log information out of the daily use of the sstreaming platform.
 
-The resulting classification might help to direct officials or NGO helpers of different capabilit 
-to scenes where they are really needed.
+This accidentially created information shall help to identify users that are on the brink of churning, of leaving the revenue prone paid service.
+
+
+The resulting classification might help to intercept this decision of churning just in time by offering incentives or cheaper service or or or...
+
+Now the task i to inspect the logs, and find useful features 
++ to detect the churning itself, and to 
++ somehow describe user behaviour indirectly 
++ thus, by ML, detect behaviour leading to churn.
+
+This is a classical classification problem.
+
+
 
 ## CRISP-DM Process: Pose and Answer Questions
 
